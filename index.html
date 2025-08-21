@@ -155,12 +155,15 @@ body::before {
 </body>
 
 
+
 <!-- Image Slider -->
 <div class="slider">
   <div class="slides">
+     
     <img src="USA.jpg" alt="Image 1" class="slide">
     <img src="Japan.jpg" alt="Image 2" class="slide">
     <img src="Korea.jpg" alt="Image 3" class="slide">
+     
   </div>
 </div>
 
@@ -172,31 +175,34 @@ body::before {
   margin: 30px auto;
   overflow: hidden;
   border-radius: 30px 10px 30px 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 25px rgba(0,0,0.3);
   position: relative;
 }
 
 /* Slides Wrapper */
 .slides {
   display: flex;
-  width: 300%; /* 3 images → 3 * 100% */
-  animation: slide 12s infinite;
+  width: 100%;
+  animation: slide 16s infinite; /* Auto slide */
 }
 
 /* Each Slide */
 .slide {
   min-width: 100%;
+  transition: transform 0.3s ease;
   object-fit: cover;
 }
 
-/* Animation Keyframes (3 slides only) */
+/* Animation Keyframes */
 @keyframes slide {
   0%   { transform: translateX(0%); }
-  25%  { transform: translateX(0%); }
-  33%  { transform: translateX(-100%); }
-  58%  { transform: translateX(-100%); }
-  66%  { transform: translateX(-200%); }
-  91%  { transform: translateX(-200%); }
+  20%  { transform: translateX(0%); }
+  25%  { transform: translateX(-100%); }
+  45%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-200%); }
+  70%  { transform: translateX(-200%); }
+  75%  { transform: translateX(-300%); }
+  95%  { transform: translateX(-300%); }
   100% { transform: translateX(0%); }
 }
 </style>
@@ -715,6 +721,7 @@ function submitReview() {
 </html>
 
                                     
+
 
 
 
