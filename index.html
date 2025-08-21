@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUNRISE EDUCATION FOUNDATION</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+   /* Sunrise Logo Watermark - Darker */
+body::before {
+    content: "";
+    position: fixed;        
+    top: 50%;
+    left: 50%;
+    width: 400px;           
+    height: 400px;
+    background: url('logo.jpg') no-repeat center center; 
+    background-size: contain;
+    opacity: 0.15;          /* darker watermark */
+    transform: translate(-50%, -50%) rotate(-20deg); 
+    z-index: 0;             
+    pointer-events: none;   
+}
+
+ /* Reset & base */
+        * {margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat', sans-serif;}
+        body {background:#fffbe6; color:#333; scroll-behavior: smooth;}
+        a {text-decoration:none; color:inherit;}
+
+        /* Header */
+        header {background:linear-gradient(135deg,#fdd835,#ff5722); padding:20px 50px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; position:sticky; top:0; z-index:1000;}
+        header h1 {color:#fff; font-size:28px;}
+        header p {color:#fff; font-size:16px; margin-top:5px;}
+        nav a {margin:0 15px; color:#fff; font-weight:500; transition:0.3s;}
+        nav a:hover {color:#ffd700; transform:scale(1.1);}
+        .social-icons a {margin:0 10px; color:#fff; font-size:20px; transition:0.3s;}
+        .social-icons a:hover {color:#ffd700; transform: scale(1.2) rotate(10deg);}
+
+        /* Sections */
+        section {padding:80px 50px; text-align:center;}
+        section h2 {color:#ff5722; font-size:36px; margin-bottom:20px;}
+        section p {max-width:800px; margin:20px auto; line-height:1.8; font-size:18px;}
+
+        /* Home */
+        #home {background: linear-gradient(135deg,#fdd835,#ff9800); color:#fff; padding:120px 50px; text-align:center;}
+        #home h2 {font-size:48px; margin-bottom:20px;}
+        #home p {font-size:20px;}
+        #home button {background:#fff; color:#ff5722; border:none; padding:15px 30px; border-radius:50px; font-size:18px; cursor:pointer; font-weight:700; transition:0.3s;}
+        #home button:hover {background:#ff5722; color:#fff;}
+
+        /* About */
+        #about {background:#fff8e1;}
+        #about .cards {display:flex; justify-content:space-around; flex-wrap:wrap; margin-top:40px;}
+        .card {background:#fffbe6; padding:30px; margin:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2); transition:0.3s; flex:1 1 250px;}
+        .card:hover {transform:translateY(-10px) scale(1.05);}
+        .card i {font-size:40px; color:#ff5722; margin-bottom:15px;}
+        .card h3 {color:#ff5722; margin-bottom:10px;}
+        
+        /* Services */
+        #services {background:#fffbe6;}
+        .service-cards {display:flex; justify-content:space-around; flex-wrap:wrap; margin-top:40px;}
+        .service-card {background:#fff8e1; padding:30px; margin:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2); transition:0.3s; flex:1 1 250px;}
+        .service-card:hover {transform:translateY(-10px) scale(1.05);}
+        .service-card i {font-size:40px; color:#fdd835; margin-bottom:15px;}
+        .service-card h3 {color:#ff5722; margin-bottom:10px;}
+
+        /* Contact */
+        #contact {background:#fff8e1;}
+        .form-container {display:flex; justify-content:space-around; flex-wrap:wrap; margin-top:40px;}
+        form {background:#fffbe6; padding:30px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2); width:300px; margin:10px;}
+        form h3 {margin-bottom:15px; color:#ff5722;}
+        input, textarea {width:100%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #ccc;}
+        button {background:#fdd835; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; font-weight:700; transition:0.3s;}
+        button:hover {background:#ff5722; color:#fff;}
+
+        /* Reviews */
+        #reviews {background:#fffbe6;}
+        .review-box {background:#fff8e1; padding:20px; border-radius:10px; margin:20px auto; max-width:600px; box-shadow:0 5px 15px rgba(0,0,0,0.2); transition:0.3s;}
+        .review-box:hover {transform:scale(1.03);}
+        .star {color:gold; font-size:25px; margin:0 2px;}
+
+        /* Footer */
+        footer {background: linear-gradient(135deg,#ff5722,#fdd835); color:#fff; padding:30px 50px; text-align:center;}
+        footer p {margin:10px 0;}
+        footer .social-icons {margin:20px 0;}
+
+        /* Responsive */
+        @media(max-width:900px){
+            header {flex-direction:column; align-items:center;}
+            nav {margin-top:10px;}
+            .cards, .service-cards {flex-direction:column; align-items:center;}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+
+    <header>
+        <a href="index.html" style="display:flex; align-items:center; text-decoration:none; color:white;">
+    <!-- Logo Image on the left -->
+    <img src="logo.jpg" alt="Sunrise Logo" style="height:50px; margin-right:12px; border-radius:5px;">
+
+    <!-- Site Name -->
+    <span style="font-size:22px; font-weight:bold; letter-spacing:1px;">
+        SUNRISE EDUCATION FOUNDATION<br>
+       <p>Beldangi Road,Damak-6,Nepal</p> 
+
+    </span>
+    <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#reviews">Reviews</a>
+        </nav>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61550260193271" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/explore/locations/122096501732008936/sunrise-education-foundation-damak-5jhapa/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@sunriseeducationdamak?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://youtube.com/@sujanadhikari3032?si=gdK9UP11VFPG8N4b" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="http://Wa.me/9816988625" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+    </header>
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to SUNRISE EDUCATION FOUNDATION</h2>
+        <p>Top-quality consultancy and training services to boost your educational and professional growth. Join us to enhance your skills and career opportunities!</p>
+        <button onclick="window.location='#contact'">Join Us  </button>
+        <!DOCTYPE html> <br>
+        <br>
+        
+
+<body>
+  <button onclick="speakMessage()">🔊 "Dream big, learn more, achieve greater."</button>
+
+  <script>
+    function speakMessage() {
+      const message = "Hi, welcome to Sunrise Education Foundation. How can I help you? Dream big, learn more, achieve greater with Sunrise Education Foundation.";
+      const speech = new SpeechSynthesisUtterance(message);
+      speech.lang = "en-US";  // language
+      speech.pitch = 1;       // voice pitch
+      speech.rate = 1;        // speed
+      window.speechSynthesis.speak(speech);
+    }
+
+    // Auto play on page load
+    window.onload = function() {
+      speakMessage();
+    };
+  </script>
+</body>
+
+
+<!-- Image Slider -->
+<div class="slider">
+  <div class="slides">
+     <img src="Australia.jpg" alt="Image 4" class="slide">
+    <img src="USA.jpg" alt="Image 1" class="slide">
+    <img src="Japan.jpg" alt="Image 2" class="slide">
+    <img src="Korea.jpg" alt="Image 3" class="slide">
+     <img src="Canada.jpg" alt="Image 5" class="slide">
+    <img src="Canada.jpg" alt="Image 5" class="slide">
+  </div>
+</div>
+
+<style>
+/* Slider Container */
+.slider {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 30px 10px 30px 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+/* Slides Wrapper */
+.slides {
+  display: flex;
+  width: 100%;
+  animation: slide 16s infinite; /* Auto slide */
+}
+
+/* Each Slide */
+.slide {
+  min-width: 100%;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+/* Animation Keyframes */
+@keyframes slide {
+  0%   { transform: translateX(0%); }
+  20%  { transform: translateX(0%); }
+  25%  { transform: translateX(-100%); }
+  45%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-200%); }
+  70%  { transform: translateX(-200%); }
+  75%  { transform: translateX(-300%); }
+  95%  { transform: translateX(-300%); }
+  100% { transform: translateX(0%); }
+}
+</style>
+</style>
+
+</style>
+
+</style>
+<!-- Study Abroad Section -->
+<section id="study-abroad">
+  <h2>Study Abroad Opportunities</h2>
+  <div class="countries">
+    <div class="country animate"><img src="flagsJapan.png" alt="Japan Flag"><p>Japan</p></div>
+    <div class="country animate"><img src="flagsKorea.png" alt="Korea Flag"><p>Korea</p></div>
+    <div class="country animate"><img src="flagsUSA.png" alt="USA Flag"><p>USA</p></div>
+    <div class="country animate"><img src="flagsUK.png" alt="UK Flag"><p>UK</p></div>
+    <div class="country animate"><img src="flagsAustralia.png" alt="Australia Flag"><p>Australia</p></div>
+    <div class="country animate"><img src="flagsDenmark.png" alt="Denmark Flag"><p>Denmark</p></div>
+    <div class="country animate"><img src="flagsCanada.png" alt="Canada Flag"><p>Canada</p></div>
+  </div>
+</section>
+
+<style>
+  /* Study Abroad Section */
+  #study-abroad {background:#fff8e1; padding:80px 50px; text-align:center;}
+  #study-abroad h2 {color:#ff5722; margin-bottom:40px;}
+  .countries {display:flex; justify-content:center; flex-wrap:wrap; gap:30px;}
+  .country {background:#fffbe6; border-radius:15px; padding:20px; width:150px; box-shadow:0 5px 15px rgba(0,0,0,0.2); transition:0.3s; opacity:0; transform: translateY(50px);}
+  .country img {width:80px; height:50px; object-fit:cover; margin-bottom:10px; border-radius:5px; border:1px solid #ccc;}
+  .country p {font-weight:700; color:#ff5722; font-size:18px;}
+  .country:hover {transform:scale(1.05);}
+  
+  /* Animation */
+  .animate.visible {opacity:1; transform:translateY(0); transition: all 0.8s ease-in-out;}
+</style>
+
+<script>
+  // Animate on scroll
+  const countries = document.querySelectorAll('.country.animate');
+
+  function revealCountries() {
+    const triggerBottom = window.innerHeight * 0.85;
+    countries.forEach(country => {
+      const countryTop = country.getBoundingClientRect().top;
+      if(countryTop < triggerBottom){
+        country.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealCountries);
+  window.addEventListener('load', revealCountries);
+</script>
+    </section>
+
+   
+   
+    
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+         
+      <p>We are dedicated to providing personalized consultancy and professional training to help students and professionals achieve their goals in Nepal and abroad.</p>
+        <div class="cards">
+            <div class="card">
+                <i class="fas fa-user-graduate"></i>
+                <h3>Expert Guidance</h3>
+                <p>Get mentorship from experienced instructors who understand the latest academic and career trends.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>Quality Training</h3>
+                <p>Interactive training programs for exams, language courses, and professional certifications.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-globe"></i>
+                <h3>Global Opportunities</h3>
+                <p>We help you explore study abroad programs and international career pathways.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <i class="fas fa-book"></i>
+                <h3>Academic Consultancy</h3>
+                <p>Personalized guidance for school, college, and higher education programs.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-language"></i>
+                <h3>Language Training</h3>
+                <p>IELTS, PTE, Japanese, Korean and other language courses with expert trainers.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-briefcase"></i>
+                <h3>Professional Courses</h3>
+                <p>Accounting, Tally,Photoshop,Microsoft office packages,Graphic Design,HTML,CSS and more to boost your career.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <div class="form-container">
+        <!-- Login Form -->
+        <form>
+            <h3>Login</h3>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Message Form -->
+        <form>
+            <h3>Message Us</h3>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Write your message..." rows="5" required></textarea>
+            <button type="submit">Send</button>
+            <br><br>
+            <!-- WhatsApp Message Button -->
+            <a href="https://wa.me/9816988625?text=Hi%20Sunrise%20Education%20Foundation!%20I%20would%20like%20to%20inquire%20about%20your%20services." 
+               target="_blank" 
+               style="display:inline-block; background:#25D366; color:white; padding:10px 20px; border-radius:5px; font-weight:700; text-decoration:none; margin-top:10px;">
+                <i class="fab fa-whatsapp"></i> Message via WhatsApp
+            </a>
+        </form>
+
+     </div>
+</section>
+<section id="reviews">
+    <h2>Our Reviews</h2>
+
+    <!-- Review Submission Form -->
+    <div class="review-form" style="max-width:500px; margin:20px auto; background:#fff8e1; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
+        <h3>Write a Review</h3>
+        <label>Rating:</label>
+        <div id="starRating" style="margin:10px 0;">
+            <span class="star" data-value="1">&#9734;</span>
+            <span class="star" data-value="2">&#9734;</span>
+            <span class="star" data-value="3">&#9734;</span>
+            <span class="star" data-value="4">&#9734;</span>
+            <span class="star" data-value="5">&#9734;</span>
+        </div>
+        <input type="text" id="reviewName" placeholder="Your Name" style="width:100%; padding:10px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc;" required>
+        <textarea id="reviewText" placeholder="Write your review..." rows="4" style="width:100%; padding:10px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc;" required></textarea>
+        <button onclick="submitReview()" style="background:#fdd835; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; font-weight:700;">Submit</button>
+    </div>
+
+    <!-- Display Reviews -->
+    <div id="reviewDisplay" style="margin-top:40px;"></div>
+</section>
+
+<!-- JS for Star Rating & Review Display --><script> 
+let selectedRating = 0;
+const stars = document.querySelectorAll('#starRating .star');
+
+stars.forEach(star => {
+    star.addEventListener('mouseover', () => {
+        const val = parseInt(star.getAttribute('data-value'));
+        highlightStars(val);
+    });
+    star.addEventListener('click', () => {
+        selectedRating = parseInt(star.getAttribute('data-value'));
+        highlightStars(selectedRating);
+    });
+    star.addEventListener('mouseout', () => {
+        highlightStars(selectedRating);
+    });
+});
+
+function highlightStars(rating) {
+    stars.forEach(star => {
+        const val = parseInt(star.getAttribute('data-value'));
+        star.innerHTML = val <= rating ? '&#9733;' : '&#9734;';
+        star.style.color = val <= rating ? 'gold' : '#ccc';
+    });
+}
+
+function submitReview() {
+    const name = document.getElementById('reviewName').value.trim();
+    const text = document.getElementById('reviewText').value.trim();
+    if(name === '' || text === '' || selectedRating === 0) {
+        alert('Please enter your name, review text, and select a rating!');
+        return;
+    }
+
+    const reviewDisplay = document.getElementById('reviewDisplay');
+    const reviewBox = document.createElement('div');
+    reviewBox.classList.add('review-box');
+    reviewBox.style.background='#fff8e1';
+    reviewBox.style.padding='20px';
+    reviewBox.style.borderRadius='10px';
+    reviewBox.style.margin='20px auto';
+    reviewBox.style.maxWidth='600px';
+    reviewBox.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)';
+
+    // Star HTML
+    let starsHTML = '';
+    for(let i=1;i<=5;i++){
+        starsHTML += i <= selectedRating ? '<span class="star">&#9733;</span>' : '<span class="star">&#9734;</span>';
+    }
+
+    reviewBox.innerHTML = `<div>${starsHTML}</div><p><strong>${name}</strong></p><p>${text}</p>`;
+    reviewDisplay.prepend(reviewBox); // Add new reviews on top
+
+    // Reset form
+    document.getElementById('reviewName').value = '';
+    document.getElementById('reviewText').value = '';
+    selectedRating = 0;
+    highlightStars(0);
+}
+</script>
+
+
+
+<!-- FAQ Section -->
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-container">
+    
+    <!-- FAQ Items -->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What courses do you offer?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        We offer IT Training, Language courses (IELTS, PTE, Japanese, Korean), Accounting, Tally, DSA, Python, and more.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How can I contact you?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        You can contact us via the contact form, email, or our social media handles like Facebook, Instagram, TikTok, and WhatsApp.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Do you provide study abroad consultancy?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes! We help students explore study abroad programs and provide guidance for applications, visa processes, and international career paths.
+      </div>
+    </div>
+
+    <!-- Additional FAQs (same style now) -->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How long are the courses?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Course duration varies depending on the program. Language courses may range from 1 to 6 months, IT training from 2 to 12 weeks, and professional courses as per syllabus.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Are there any age restrictions for enrollment?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Most courses are open to students of all ages. Some professional or language courses may have recommended minimum age criteria.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Do you provide certificates after course completion?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes! All students receive a certificate of completion recognized by Sunrise Education Foundation upon successful completion of their course.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Can I get personalized tutoring?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes! We offer personalized tutoring and one-on-one guidance for students needing extra help in their courses.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Do you provide free trial classes?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        For certain courses, we offer free trial classes so you can experience the teaching style before enrolling.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Are group discounts available?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes! We provide discounts for group enrollments, school/college batches, or referrals. Contact us for details.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Can I change my course after enrollment?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Depending on availability and course policies, you may be allowed to switch courses. Contact our administration for guidance.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Is there a support system for students?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes! We provide ongoing support via mentors, counselors, and online resources to ensure every student succeeds.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What languages are courses offered in?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Most courses are offered in English and Nepali. Some language courses are taught in the target language (Japanese, Korean, etc.) for immersion.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ Styles -->
+<style>
+  #faq {
+    background:#fff8e1;
+    padding:80px 50px;
+    text-align:center;
+  }
+  #faq h2 {
+    font-size:28px;
+    margin-bottom:40px;
+    color:#e65100;
+  }
+  .faq-container {
+    max-width:800px;
+    margin:0 auto;
+    text-align:left;
+  }
+  .faq-item {
+    margin-bottom:15px;
+    border-radius:12px;
+    background:#fffbe6;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    overflow:hidden;
+    transition:transform 0.2s ease;
+  }
+  .faq-item:hover {
+    transform:scale(1.02);
+  }
+  .faq-question {
+    width:100%;
+    text-align:left;
+    padding:18px 20px;
+    font-size:18px;
+    font-weight:700;
+    border:none;
+    background:none;
+    cursor:pointer;
+    color:#d84315;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:color 0.3s;
+  }
+  .faq-question .icon {
+    font-size:22px;
+    transition:transform 0.3s, color 0.3s;
+  }
+  .faq-answer {
+    max-height:0;
+    overflow:hidden;
+    padding:0 20px;
+    font-size:16px;
+    color:#333;
+    transition:max-height 0.4s ease, padding 0.3s ease;
+  }
+  .faq-item.active .faq-answer {
+    max-height:400px; 
+    padding:15px 20px;
+  }
+  .faq-item.active .faq-question {
+    color:#ff5722;
+  }
+  .faq-item.active .faq-question .icon {
+    transform:rotate(45deg);
+    color:#ff5722;
+  }
+</style>
+
+<!-- FAQ Script -->
+<script>
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      // Close others
+      faqItems.forEach(i => {
+        if(i !== item){
+          i.classList.remove('active');
+          i.querySelector('.faq-question').setAttribute('aria-expanded','false');
+        }
+      });
+      // Toggle clicked one
+      item.classList.toggle('active');
+      question.setAttribute('aria-expanded', item.classList.contains('active'));
+    });
+  });
+</script>
+
+
+<!-- About -->
+
+          <section id="about" style="padding:40px 20px;text-align:center;background:#f9f9f9;">
+  <h2 style="font-size:26px;margin-bottom:10px;color:#333;">Board Members</h2>
+  <p style="max-width:700px;margin:0 auto 25px;font-size:15px;color:#555;">
+    <strong>Sunrise Education Foundation</strong> is committed to providing quality language and computer education to students of all ages.
+  </p>
+
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:25px;">
+    
+    <!-- Founder -->
+    <div style="flex:1 1 280px;text-align:center;background:#fff;padding:20px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1);">
+      <img src="suzan.jpg" alt="Suzan Adhikari" style="width:140px;height:140px;border-radius:50%;object-fit:cover;margin-bottom:12px;border:3px solid #ff5722;">
+      <p><strong>Founder:</strong> Suzan Adhikari</p>
+      <p>Visionary educator, responsible for establishing the foundation and leading educational programs.</p>
+      <p><strong>Phone:</strong>+977 9816988625</p>
+    </div>
+
+    <!-- Head Coordinator -->
+    <div style="flex:1 1 280px;text-align:center;background:#fff;padding:20px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1);">
+      <img src="ramesh.jpg" alt="Ramesh Magar" style="width:140px;height:140px;border-radius:50%;object-fit:cover;margin-bottom:12px;border:3px solid #fdd835;">
+      <p><strong>Head Coordinator:</strong> Ramesh Magar</p>
+      <p>Japanese & Computer Instructor, motivational speaker, responsible for curriculum and student engagement.</p>
+      <p><strong>Phone:</strong> +977 9810094146</p>
+    </div>
+
+  </div>
+</section>
+
+        </div>
+    </div>
+</section>
+<!-- Sunrise Education Foundation Location -->
+<section id="location" style="text-align:center; margin:40px 0;">
+  <h2>Our Location</h2>
+  <p>
+    <strong>Sunrise Education Foundation</strong><br>
+    KD Complex, Beldangi Road <br>
+    East side of DMAX Building <br>
+    Damak-6, Jhapa, Nepal <br>
+    Phone: 023-577156 wsz
+  </p>
+
+  <!-- Google Map Embed -->
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.269!2d87.704!3d26.665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e58b6c6bd4e9d1%3A0xexample!2sKD%20Complex%2C%20Beldangi%20Road%2C%20Damak!5e0!3m2!1sen!2snp!4v1692691726" 
+    width="600" 
+    height="450" 
+    style="border:0; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.2);" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            
+            <a href="https://www.facebook.com/profile.php?id=61550260193271" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/explore/locations/122096501732008936/sunrise-education-foundation-damak-5jhapa/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@sunriseeducationdamak?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://youtube.com/@sujanadhikari3032?si=gdK9UP11VFPG8N4b" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="http://Wa.me/9816988625" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:sunriseeducationconsultancy06@gmail.com" style="text-decoration:none; font-size:18px; color:#fff; background:#d93025; padding:10px 20px; border-radius:5px;">
+   📧 Email Us
+</a>
+
+</a>
+
+        </div>
+        <p>&copy; 2025 SUNRISE EDUCATION FOUNDATION. All Rights Reserved. <br>
+           Powered by SUNRISE EDUCATION FOUNDATION</p>
+    </footer>
+
+</body>
+</html>
+
+                                    
