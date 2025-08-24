@@ -23,6 +23,28 @@ body::before {
     pointer-events: none;   
 }
 
+     
+    /* This makes the watermark appear only as background */
+    body {
+      background: url("globe.jpeg") no-repeat center center fixed;
+      background-size: 200px;   /* Adjust size of watermark */
+    }
+
+    /* Make text and map normal (not transparent) */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("globe.jpeg") no-repeat center center;
+      background-size: 200px;
+      opacity: 0.1;   /* Transparency only on watermark */
+      z-index: -1;    /* Sends watermark behind everything */
+    }
+   
+
  /* Reset & base */
         * {margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat', sans-serif;}
         body {background:#fffbe6; color:#333; scroll-behavior: smooth;}
@@ -94,19 +116,6 @@ body::before {
     </style>
 </head>
 <body>
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("globe.jpeg") no-repeat center center;
-  background-size: 300px;  /* control watermark size */
-  opacity: 0.15;           /* faint watermark effect */
-  z-index: -1;             /* behind content */
-}
-
     <!-- Header -->
 
     <header>
@@ -721,6 +730,7 @@ function submitReview() {
 </html>
 
                                     
+
 
 
 
