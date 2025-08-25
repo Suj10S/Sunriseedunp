@@ -60,3 +60,34 @@ document.querySelector("#reviewForm").addEventListener("submit", function(e) {
     sendData("/save_review/", { reviewer, review, rating }).then(res => alert(res.message));
 });
 </script>
+<script>
+// Mobile-friendly menu toggle (for small screens)
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".nav-link");
+  const navbarCollapse = document.querySelector(".navbar-collapse");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (navbarCollapse.classList.contains("show")) {
+        new bootstrap.Collapse(navbarCollapse).toggle();
+      }
+    });
+  });
+});
+</script>
+<script>
+function adjustFontSize() {
+  let width = window.innerWidth;
+  if (width < 480) {
+    document.body.style.fontSize = "14px"; // small phones
+  } else if (width < 768) {
+    document.body.style.fontSize = "16px"; // medium devices
+  } else {
+    document.body.style.fontSize = "18px"; // laptops/PCs
+  }
+}
+window.addEventListener("resize", adjustFontSize);
+window.addEventListener("load", adjustFontSize);
+</script>
+
+
