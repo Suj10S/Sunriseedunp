@@ -335,67 +335,86 @@ body::before {
             window.addEventListener('load', revealCountries);
         </script>
     </section>
-
-    <!-- Student Success Carousel -->
-    <div class="container my-5">
-        <h2 class="text-center mb-4 text-warning fw-bold">Our Successful Students</h2>
-        
-        <div id="studentCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- Student 1 -->
-                <div class="carousel-item active">
-                    <img src="std1.jpg" class="d-block w-100" alt="Student 1">
-                    <div class="carousel-caption">
-                        <h5>Mr. Pawan Limbu</h5>
-                        <p>Achieved top rank in Accounting</p>
-                    </div>
-                </div>
-
-                <!-- Student 2 -->
-                <div class="carousel-item">
-                    <img src="std2.jpg" class="d-block w-100" alt="Student 2">
-                    <div class="carousel-caption">
-                        <h5>Miss Sabu Gautam</h5>
-                        <p>Certified in Computer Software</p>
-                    </div>
-                </div>
-
-                <!-- Student 3 -->
-                <div class="carousel-item">
-                    <img src="std3.jpg" class="d-block w-100" alt="Student 3">
-                    <div class="carousel-caption">
-                        <h5>Miss Rekha Budathoki</h5>
-                        <p>Fluent in Japanese Language</p>
-                    </div>
-                </div>
-
-                <!-- Student 4 -->
-                <div class="carousel-item">
-                    <img src="std4.jpg" class="d-block w-100" alt="Student 4">
-                    <div class="carousel-caption">
-                        <h5>Mr Hari Khadka</h5>
-                        <p>Won National Scholarship</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#studentCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#studentCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-
-            <!-- Indicators -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="3"></button>
-            </div>
-        </div>
+    <!-- Our Successful Students Section -->
+<section id="students" style="padding:40px 20px; background:#f9f9f9;">
+  <h2 style="text-align:center; margin-bottom:30px;">Our Successful Students</h2>
+  
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <!-- Student 1 -->
+      <div class="student-card">
+        <img src="std1.jpg" alt="Student 1">
+        <h3>Mr Pawan Limbu</h3>
+        <p>UK Visa</p>
+      </div>
+      <!-- Student 2 -->
+      <div class="student-card">
+        <img src="std2.jpg" alt="Student 2">
+        <h3>Miss Sabu Gautam</h3>
+        <p>Japan Study Visa</p>
+      </div>
+      <!-- Student 3 -->
+      <div class="student-card">
+        <img src="std3.jpg" alt="Student 3">
+        <h3>Miss Rekha Budathoki</h3>
+        <p>Japan Study Visa</p>
+      </div>
+      <!-- Student 4 -->
+      <div class="student-card">
+        <img src="std4.jpg" alt="Student 4">
+        <h3>Mr Hari Khadka</h3>
+        <p>Japan Study Visa</p>
+      </div>
     </div>
+  </div>
+</section>
+
+<style>
+.carousel-container {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 400%;
+  animation: slide 16s infinite;
+}
+
+.student-card {
+  flex: 1 0 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.student-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  20% { transform: translateX(0%); }
+
+  25% { transform: translateX(-100%); }
+  45% { transform: translateX(-100%); }
+
+  50% { transform: translateX(-200%); }
+  70% { transform: translateX(-200%); }
+
+  75% { transform: translateX(-300%); }
+  95% { transform: translateX(-300%); }
+
+  100% { transform: translateX(0%); }
+}
+</style>
+
 
     <!-- About Section -->
     <section id="about">
