@@ -72,28 +72,6 @@ body::before {
             background: rgba(255,255,255,0.1);
         }
         
-        /* Mobile menu button */
-        .menu-btn {
-            display: none;
-            flex-direction: column;
-            justify-content: space-around;
-            width: 30px;
-            height: 25px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            margin-left: 20px;
-        }
-        
-        .menu-btn span {
-            width: 100%;
-            height: 3px;
-            background-color: white;
-            border-radius: 2px;
-            transition: all 0.3s;
-        }
-        
         /* Sections */
         section {padding:80px 50px; text-align:center;}
         section h2 {color:#ff5722; font-size:36px; margin-bottom:20px;}
@@ -255,13 +233,8 @@ body::before {
                 order: 3;
                 width: 100%;
                 margin: 15px 0 0 0;
-                display: none;
                 flex-direction: column;
                 justify-content: flex-start; /* Vertical layout on mobile */
-            }
-            
-            nav.active {
-                display: flex;
             }
             
             nav a {
@@ -269,10 +242,6 @@ body::before {
                 padding: 10px;
                 text-align: left;
                 background: rgba(0,0,0,0.1);
-            }
-            
-            .menu-btn {
-                display: flex;
             }
             
             .cards, .service-cards {flex-direction:column; align-items:center;}
@@ -456,12 +425,6 @@ body::before {
                <p>Beldangi Road,Damak-6,Nepal</p> 
             </span>
         </a>
-        
-        <button class="menu-btn" aria-label="Toggle navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
         
         <nav id="main-nav">
             <a href="#home">Home</a>
@@ -842,24 +805,6 @@ body::before {
     </a>
 
     <script>
-        // Mobile menu functionality
-        const menuBtn = document.querySelector('.menu-btn');
-        const nav = document.querySelector('nav');
-        
-        menuBtn.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            menuBtn.setAttribute('aria-expanded', 
-                menuBtn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
-        });
-        
-        // Close menu when clicking on a link
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-                menuBtn.setAttribute('aria-expanded', 'false');
-            });
-        });
-        
         // Text-to-speech function
         function speakMessage() {
             const message = "Hi, welcome to Sunrise Education Foundation. How can I help you? Dream big, learn more, achieve greater with Sunrise Education Foundation.";
