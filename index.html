@@ -75,7 +75,7 @@ body::before {
         /* Contact */
         #contact {background:#fff8e1;}
         .form-container {display:flex; justify-content:space-around; flex-wrap:wrap; margin-top:40px;}
-        form {background:#fffbe6; padding:30px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2); width:300px; margin:10px;}
+        form {background:#fffbe6; padding:30px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2); width:100%; max-width:400px; margin:10px;}
         form h3 {margin-bottom:15px; color:#ff5722;}
         input, textarea {width:100%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #ccc;}
         button {background:#fdd835; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; font-weight:700; transition:0.3s;}
@@ -209,14 +209,6 @@ body::before {
             <a href="#contact">Contact</a>
             <a href="#reviews">Reviews</a>
         </nav>
-
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61550260193271" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/explore/locations/122096501732008936/sunrise-education-foundation-damak-5jhapa/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@sunriseeducationdamak?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://youtube.com/@sujanadhikari3032?si=gdK9UP11VFPG8N4b" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="http://Wa.me/9816988625" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        </div>
     </header>
 
     <!-- Home Section -->
@@ -434,19 +426,14 @@ body::before {
         <h2>Contact Us</h2>
         <div class="form-container">
             <!-- Message Form Only (Login Form Removed) -->
-            <form>
+            <form id="messageForm">
                 <h3>Message Us</h3>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Write your message..." rows="5" required></textarea>
-                <button type="submit">Send</button>
-                <br><br>
-                <!-- WhatsApp Message Button -->
-                <a href="https://wa.me/9816988625?text=Hi%20Sunrise%20Education%20Foundation!%20I%20would%20like%20to%20inquire%20about%20your%20services." 
-                   target="_blank" 
-                   style="display:inline-block; background:#25D366; color:white; padding:10px 20px; border-radius:5px; font-weight:700; text-decoration:none; margin-top:10px;">
-                    <i class="fab fa-whatsapp"></i> Message via WhatsApp
-                </a>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="tel" id="phone" placeholder="Your Phone Number" required>
+                <textarea id="address" placeholder="Your Address" rows="3" required></textarea>
+                <textarea id="message" placeholder="Write your message..." rows="5" required></textarea>
+                <button type="button" onclick="sendToWhatsApp()">Send via WhatsApp</button>
             </form>
         </div>
     </section>
@@ -800,5 +787,39 @@ body::before {
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function sendToWhatsApp() {
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const message = document.getElementById('message').value;
+            
+            // Validate required fields
+            if (!name || !email || !phone || !address || !message) {
+                alert('Please fill all required fields');
+                return;
+            }
+            
+            // Format the message in a tabular format
+            const whatsappMessage = `*New Message from Sunrise Education Website*%0A%0A` +
+                                   `*Name:* ${name}%0A` +
+                                   `*Email:* ${email}%0A` +
+                                   `*Phone:* ${phone}%0A` +
+                                   `*Address:* ${address}%0A` +
+                                   `*Message:* ${message}`;
+            
+            // Create WhatsApp URL
+            const whatsappURL = `https://wa.me/9779816988625?text=${whatsappMessage}`;
+            
+            // Open WhatsApp in a new tab
+            window.open(whatsappURL, '_blank');
+            
+            // Optional: Reset the form
+            document.getElementById('messageForm').reset();
+        }
+    </script>
 </body>
 </html>
