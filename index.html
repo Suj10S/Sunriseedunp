@@ -3,139 +3,902 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUNRISE EDUCATION FOUNDATION</title>
-    <meta name="description" content="Sunrise Education Foundation - Language & IT Training, Consultancy, Study Abroad Guidance in Damak, Nepal.">
-    <meta name="keywords" content="Education, Language Courses, Study Abroad, Damak, Nepal, Sunrise Foundation">
+    <title>SUNRISE EDUCATION FOUNDATION - Language & IT Training, Study Abroad Guidance</title>
+    <meta name="description" content="Sunrise Education Foundation in Damak, Nepal offers premier language courses (IELTS, Japanese, Korean), IT training, computer courses, and study abroad consultancy services.">
+    <meta name="keywords" content="education consultancy, study abroad, language courses, IT training, Damak, Nepal, Sunrise Foundation, IELTS, Japanese language, Korean language, computer courses, overseas education">
     <meta name="author" content="Sunrise Education Foundation">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.sunriseeducationdamak.com" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Favicon Implementation -->
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.jpg">
+
+    <!-- Local Business Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Sunrise Education Foundation",
+      "description": "Premier language & IT training, study abroad consultancy in Damak, Nepal",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "KD Complex, Beldangi Road",
+        "addressLocality": "Damak",
+        "addressRegion": "Jhapa",
+        "postalCode": "57200",
+        "addressCountry": "NP"
+      },
+      "telephone": "+977-023-577156",
+      "url": "https://www.sunriseeducationdamak.com",
+      "openingHours": "Mo-Fr 09:00-18:00, Sa 09:00-14:00"
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <style>
-   /* Sunrise Logo Watermark - Darker */
-body::before {
-    content: "";
-    position: fixed;        
-    top: 50%;
-    left: 50%;
-    width: 400px;           
-    height: 400px;
-    background: url('logo.jpg') no-repeat center center; 
-    background-size: contain;
-    opacity: 0.15;          /* darker watermark */
-    transform: translate(-50%, -50%) rotate(-20deg); 
-    z-index: 0;             
-    pointer-events: none;   
-}
-
- /* Reset & base */
-        * {margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat', sans-serif;}
-        body {background:#fffbe6; color:#333; scroll-behavior: smooth;}
-        a {text-decoration:none; color:inherit;}
-
-        /* Header */
-        header {background:linear-gradient(135deg,#fdd835,#ff5722); padding:20px 50px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; position:sticky; top:0; z-index:1000;}
-        header h1 {color:#fff; font-size:28px;}
-        header p {color:#fff; font-size:16px; margin-top:5px;}
-        nav a {margin:0 15px; color:#fff; font-weight:500; transition:0.3s;}
-        nav a:hover {color:#ffd700; transform:scale(1.1);}
-        .social-icons a {margin:0 10px; color:#fff; font-size:20px; transition:0.3s;}
-        .social-icons a:hover {color:#ffd700; transform: scale(1.2) rotate(10deg);}
-
-        /* Sections */
-        section {padding:80px 50px; text-align:center;}
-        section h2 {color:#ff5722; font-size:36px; margin-bottom:20px;}
-        section p {max-width:800px; margin:20px auto; line-height:1.8; font-size:18px;}
-
-        /* Home */
-        #home {background: linear-gradient(135deg,#fdd835,#ff9800); color:#fff; padding:120px 50px; text-align:center;}
-        #home h2 {font-size:48px; margin-bottom:20px;}
-        #home p {font-size:20px;}
-        #home button {background:#fff; color:#ff5722; border:none; padding:15px 30px; border-radius:50px; font-size:18px; cursor:pointer; font-weight:700; transition:0.3s;}
-        #home button:hover {background:#ff5722; color:#fff;}
-
-        /* About */
-        #about {background:#fff8e1;}
-        #about .cards {display:flex; justify-content:space-around; flex-wrap:wrap; margin-top:40px;}
-        .card {background:#fffbe6; padding:30px; margin:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2); transition:0.3s; flex:1 1 250px;}
-        .card:hover {transform:translateY(-10px) scale(1.05);}
-        .card i {font-size:40px; color:#ff5722; margin-bottom:15px;}
-        .card h3 {color:#ff5722; margin-bottom:10px;}
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
         
-        /* Services */
-        #services {background:#fffbe6;}
-        .service-cards {display:flex; justify-content:space-around; flex-wrap:wrap; margin-top:40px;}
-        .service-card {background:#fff8e1; padding:30px; margin:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2); transition:0.3s; flex:1 1 250px;}
-        .service-card:hover {transform:translateY(-10px) scale(1.05);}
-        .service-card i {font-size:40px; color:#fdd835; margin-bottom:15px;}
-        .service-card h3 {color:#ff5722; margin-bottom:10px;}
-
-        /* Contact */
-        #contact {background:#fff8e1;}
-        .form-container {display:flex; justify-content:space-around; flex-wrap:wrap; margin-top:40px;}
-        form {background:#fffbe6; padding:30px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2); width:300px; margin:10px;}
-        form h3 {margin-bottom:15px; color:#ff5722;}
-        input, textarea {width:100%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #ccc;}
-        button {background:#fdd835; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; font-weight:700; transition:0.3s;}
-        button:hover {background:#ff5722; color:#fff;}
-
-        /* Reviews */
-        #reviews {background:#fffbe6;}
-        .review-box {background:#fff8e1; padding:20px; border-radius:10px; margin:20px auto; max-width:600px; box-shadow:0 5px 15px rgba(0,0,0,0.2); transition:0.3s;}
-        .review-box:hover {transform:scale(1.03);}
-        .star {color:gold; font-size:25px; margin:0 2px;}
-
-        /* Footer */
-        footer {background: linear-gradient(135deg,#ff5722,#fdd835); color:#fff; padding:30px 50px; text-align:center;}
-        footer p {margin:10px 0;}
-        footer .social-icons {margin:20px 0;}
-
-        /* Responsive */
-        @media(max-width:900px){
-            header {flex-direction:column; align-items:center;}
-            nav {margin-top:10px;}
-            .cards, .service-cards {flex-direction:column; align-items:center;}
+        :root {
+            --primary: #ff5722;
+            --secondary: #fdd835;
+            --accent: #2196f3;
+            --light: #fffbe6;
+            --dark: #333;
+            --success: #4caf50;
+        }
+        
+        body {
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Watermark Logo */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            background: url('logo.jpg') no-repeat center center;
+            background-size: contain;
+            opacity: 0.1;
+            transform: translate(-50%, -50%) rotate(-20deg);
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .logo-container img {
+            height: 50px;
+            margin-right: 12px;
+            border-radius: 5px;
+        }
+        
+        .site-name {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .site-name p {
+            font-size: 12px;
+            margin-top: 3px;
+            font-weight: normal;
+        }
+        
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        nav a {
+            margin: 0 12px;
+            color: white;
+            font-weight: 600;
+            transition: 0.3s;
+            padding: 8px 5px;
+            text-decoration: none;
+        }
+        
+        nav a:hover, nav a.active {
+            color: var(--primary);
+        }
+        
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+        }
+        
+        .menu-toggle span {
+            height: 3px;
+            width: 100%;
+            background-color: white;
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+        
+        /* Sections Common Styles */
+        section {
+            padding: 70px 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        section h2 {
+            color: var(--primary);
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            border-radius: 3px;
+        }
+        
+        section p {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        /* Home Section */
+        #home {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,128L48,117.3C96,107,192,85,288,112C384,139,480,213,576,218.7C672,224,768,160,864,138.7C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+        
+        #home h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        #home h2::after {
+            background: white;
+        }
+        
+        #home p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: white;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            border: none;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            color: white;
+        }
+        
+        /* Voice Message Button */
+        .voice-btn {
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Slider Styles */
+        .slider {
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        .slides {
+            display: flex;
+            width: 400%;
+            animation: slide 20s infinite;
+        }
+        
+        .slide {
+            width: 25%;
+            transition: transform 0.3s ease;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        @keyframes slide {
+            0% { transform: translateX(0%); }
+            20% { transform: translateX(0%); }
+            25% { transform: translateX(-25%); }
+            45% { transform: translateX(-25%); }
+            50% { transform: translateX(-50%); }
+            70% { transform: translateX(-50%); }
+            75% { transform: translateX(-75%); }
+            95% { transform: translateX(-75%); }
+            100% { transform: translateX(0%); }
+        }
+        
+        /* Study Abroad Section */
+        #study-abroad {background:#fff8e1; padding:80px 50px; text-align:center;}
+        #study-abroad h2 {color:#ff5722; margin-bottom:40px;}
+        .countries {display:flex; justify-content:center; flex-wrap:wrap; gap:30px;}
+        .country {background:#fffbe6; border-radius:15px; padding:20px; width:150px; box-shadow:0 5px 15px rgba(0,0,0,0.2); transition:0.3s; opacity:0; transform: translateY(50px);}
+        .country img {width:80px; height:50px; object-fit:cover; margin-bottom:10px; border-radius:5px; border:1px solid #ccc;}
+        .country p {font-weight:700; color:#ff5722; font-size:18px;}
+        .country:hover {transform:scale(1.05);}
+            
+        /* Animation */
+        .animate.visible {opacity:1; transform:translateY(0); transition: all 0.8s ease-in-out;}
+        
+        /* Student Slider Styles */
+        .student-slider {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            overflow: hidden;
+            border-radius: 30px 10px 30px 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            position: relative;
         }
 
-        /* Student Reviews Grid */
+        .student-slides {
+            display: flex;
+            width: 600%;
+            animation: student-slide 24s infinite;
+        }
+
+        @keyframes student-slide {
+            0%   { transform: translateX(0%); }
+            15%  { transform: translateX(0%); }
+            16.67% { transform: translateX(-16.6667%); }
+            31.67% { transform: translateX(-16.6667%); }
+            33.33% { transform: translateX(-33.3333%); }
+            48.33% { transform: translateX(-33.3333%); }
+            50%  { transform: translateX(-50%); }
+            65%  { transform: translateX(-50%); }
+            66.67% { transform: translateX(-66.6667%); }
+            81.67% { transform: translateX(-66.6667%); }
+            83.33% { transform: translateX(-83.3333%); }
+            98.33% { transform: translateX(-83.3333%); }
+            100% { transform: translateX(0%); }
+        }
+        
+        .student-slides img {
+            width: calc(100% / 6);
+            height: auto;
+            display: block;
+        }
+        
+        /* About Section */
+        #about {
+            background: white;
+        }
+        
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .card {
+            background: #fff8e1;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            flex: 1 1 280px;
+            max-width: 350px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card i {
+            font-size: 50px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .card p {
+            text-align: center;
+            margin: 0;
+        }
+        
+        /* Stats Section Styles */
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            flex: 1 1 45%;
+            max-width: 45%;
+        }
+        
+        @media (min-width: 768px) {
+            .stat-item {
+                max-width: 20%;
+            }
+        }
+        
+        .stat-counter {
+            font-size: 1.875rem;
+            font-weight: bold;
+        }
+        
+        .stat-label {
+            color: #4b5563;
+            font-weight: 500;
+        }
+        
+        .progress-container {
+            margin-top: 2rem;
+            space-y: 1rem;
+        }
+        
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .progress-label {
+            color: #374151;
+            font-weight: 500;
+        }
+        
+        .progress-bar-container {
+            width: 100%;
+            background: #e5e7eb;
+            border-radius: 9999px;
+            height: 0.75rem;
+        }
+        
+        .progress-bar {
+          width: 0;
+          transition: width 1.5s ease-in-out;
+        }
+        .gradient-blue {
+          background: linear-gradient(to right, #3b82f6, #60a5fa);
+        }
+        .gradient-orange {
+          background: linear-gradient(to right, #f97316, #fb923c);
+        }
+        
+        /* Services Section */
+        #services {
+            background: #fff8e1;
+        }
+        
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            flex: 1 1 280px;
+            max-width: 350px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        
+        .service-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-card i {
+            font-size: 50px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .service-card p {
+            text-align: center;
+            margin: 0;
+        }
+        
+        /* Contact Section */
+        #contact {
+            background: white;
+        }
+        
+        .form-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        form {
+            background: #fff8e1;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        form h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.2);
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Reviews Section */
+        #reviews {
+            background: #fff8e1;
+        }
+        
         .student-reviews {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
             margin-top: 40px;
         }
+        
         .student-review {
-            background: #fff8e1;
+            background: white;
             border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
         }
+        
+        .student-review.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
         .student-review:hover {
             transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
+        
         .student-review img {
             width: 80px;
             height: 80px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 15px;
-            border: 3px solid #ff5722;
+            border: 3px solid var(--primary);
         }
-        .student-review .stars {
+        
+        .stars {
             margin: 10px 0;
         }
-        .student-review h3 {
-            color: #ff5722;
-            margin-bottom: 10px;
+        
+        .star {
+            color: gold;
+            font-size: 20px;
+            margin: 0 2px;
         }
+        
+        .student-review h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
         .student-review p {
             font-style: italic;
             color: #555;
+            text-align: center;
+            margin: 0;
         }
         
-        /* Floating WhatsApp Button */
+        /* FAQ Section */
+        #faq {
+            background: white;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 12px;
+            background: #fff8e1;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        
+        .faq-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .faq-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 18px 20px;
+            font-size: 18px;
+            font-weight: 700;
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #d84315;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s;
+        }
+        
+        .faq-question .icon {
+            font-size: 22px;
+            transition: transform 0.3s, color 0.3s;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            font-size: 16px;
+            color: #333;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 400px;
+            padding: 15px 20px;
+        }
+        
+        .faq-item.active .faq-question {
+            color: var(--primary);
+        }
+        
+        .faq-item.active .faq-question .icon {
+            transform: rotate(45deg);
+            color: var(--primary);
+        }
+        
+        /* Board Members Section */
+        #board-members {
+            background: #f9f9f9;
+            padding: 70px 20px;
+            text-align: center;
+        }
+        
+        .members-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .member-card {
+            flex: 1 1 300px;
+            max-width: 350px;
+            text-align: center;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        
+        .member-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .member-card img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid var(--primary);
+        }
+        
+        .member-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .member-card p {
+            margin: 5px 0;
+            text-align: center;
+        }
+        
+        /* Location Section */
+        #location {
+            text-align: center;
+            padding: 70px 20px;
+            background: #fff8e1;
+        }
+        
+        #location p {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+        }
+        
+        .footer-section {
+            flex: 1 1 300px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background: white;
+        }
+        
+        .footer-section p, .footer-section a {
+            margin: 10px 0;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .footer-section a {
+            display: block;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+        
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        
+        .footer-social a:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Floating Buttons */
         .floating-btn {
             position: fixed;
             bottom: 25px;
@@ -149,13 +912,13 @@ body::before {
             justify-content: center;
             align-items: center;
             font-size: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             z-index: 1000;
             transition: all 0.3s;
             animation: pulse 2s infinite;
+            text-decoration: none;
         }
         
-        /* Floating Call Button */
         .floating-call {
             position: fixed;
             bottom: 95px;
@@ -163,21 +926,22 @@ body::before {
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background-color: #ff5722;
+            background-color: var(--primary);
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             z-index: 1000;
             transition: all 0.3s;
             animation: pulse 2s infinite;
+            text-decoration: none;
         }
         
         .floating-btn:hover, .floating-call:hover {
             transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
         
         @keyframes pulse {
@@ -185,204 +949,295 @@ body::before {
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 160px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            transition: all 0.3s;
+            opacity: 0;
+            visibility: hidden;
+            text-decoration: none;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            section {
+                padding: 60px 20px;
+            }
+            
+            #home h2 {
+                font-size: 32px;
+            }
+            
+            .slide img {
+                height: 350px;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px 20px;
+            }
+            
+            .logo-container {
+                margin-bottom: 15px;
+            }
+            
+            nav {
+                margin: 15px 0;
+            }
+            
+            nav a {
+                margin: 0 8px;
+                font-size: 15px;
+            }
+            
+            .menu-toggle {
+                display: flex;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            nav.responsive {
+                display: block;
+                width: 100%;
+                margin-top: 15px;
+            }
+            
+            nav.responsive a {
+                display: block;
+                margin: 10px 0;
+                padding: 8px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+            
+            .slide img {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+            }
+            
+            .slide img {
+                height: 250px;
+            }
+            
+            .countries {
+                gap: 15px;
+            }
+            
+            .country {
+                width: 130px;
+                padding: 15px;
+            }
+            
+            .country img {
+                width: 70px;
+                height: 45px;
+            }
+            
+            .card, .service-card {
+                flex: 1 1 100%;
+            }
+            
+            .student-reviews {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-section {
+                flex: 1 1 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.2rem;
+            }
+            
+            .slide img {
+                height: 180px;
+            }
+            
+            footer {
+                font-size: 0.8rem;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+            
+            #home h2 {
+                font-size: 28px;
+            }
+            
+            #home p {
+                font-size: 16px;
+            }
+            
+            section h2 {
+                font-size: 26px;
+            }
+            
+            .country {
+                width: 110px;
+                padding: 10px;
+            }
+            
+            .country img {
+                width: 60px;
+                height: 40px;
+            }
+            
+            .country p {
+                font-size: 14px;
+            }
+            
+            .floating-btn, .floating-call {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .floating-call {
+                bottom: 80px;
+                font-size: 20px;
+            }
+            
+            .back-to-top {
+                bottom: 140px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
-
     <!-- Header -->
     <header>
-        <a href="index.html" style="display:flex; align-items:center; text-decoration:none; color:white;">
-            <!-- Logo Image on the left -->
-            <img src="logo.jpg" alt="Sunrise Logo" style="height:50px; margin-right:12px; border-radius:5px;">
-
-            <!-- Site Name -->
-            <span style="font-size:22px; font-weight:bold; letter-spacing:1px;">
+        <a href="index.html" class="logo-container">
+            <img src="logo.jpg" alt="Sunrise Education Foundation Logo - Language & IT Training Center">
+            <div class="site-name">
                 SUNRISE EDUCATION FOUNDATION<br>
-               <p>Beldangi Road,Damak-6,Nepal</p> 
-            </span>
+                <p>Beldangi Road, Damak-6, Nepal</p>
+            </div>
         </a>
-        <nav>
-            <a href="#home">Home</a>
+        
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <nav id="mainNav">
+            <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#contact">Contact</a>
             <a href="#reviews">Reviews</a>
         </nav>
-
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61550260193271" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/explore/locations/122096501732008936/sunrise-education-foundation-damak-5jhapa/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@sunriseeducationdamak?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://youtube.com/@sujanadhikari3032?si=gdK9UP11VFPG8N4b" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="http://Wa.me/9816988625" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        </div>
     </header>
 
     <!-- Home Section -->
     <section id="home">
         <h2>Welcome to SUNRISE EDUCATION FOUNDATION</h2>
         <p>Top-quality consultancy and training services to boost your educational and professional growth. Join us to enhance your skills and career opportunities!</p>
-        <button onclick="window.location='#contact'">Join Us</button>
-        
-        <body onload="speakMessage()">
-            <button onclick="speakMessage()">🔊 "Dream big, learn more, achieve greater."</button>
-
-            <script>
-                function speakMessage() {
-                    const message = "Hi, welcome to Sunrise Education Foundation. How can I help you? Dream big, learn more, achieve greater with Sunrise Education Foundation.";
-                    const speech = new SpeechSynthesisUtterance(message);
-                    speech.lang = "en-US";
-                    speech.pitch = 1;
-                    speech.rate = 1;
-                    window.speechSynthesis.speak(speech);
-                }
-            </script>
-        </body>
+        <button class="btn" onclick="scrollToSection('contact')">Join Us Today</button>
+        <button class="btn btn-secondary voice-btn" onclick="speakMessage()">
+            <i class="fas fa-volume-up"></i> Listen to our Message
+        </button>
 
         <!-- Image Slider -->
         <div class="slider">
             <div class="slides">
-                <img src="USA.jpg" alt="Image 1" class="slide">
-                <img src="Japan.jpg" alt="Image 2" class="slide">
-                <img src="Korea.jpg" alt="Image 3" class="slide">
-                <img src="UK.jpg" alt="Image 5" class="slide">
-            </div>
-        </div>
-
-        <style>
-            /* Slider Container */
-            .slider {
-                width: 100%;
-                max-width: 800px;
-                margin: 30px auto;
-                overflow: hidden;
-                border-radius: 30px 10px 30px 10px;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-                position: relative;
-            }
-
-            /* Slides Wrapper */
-            .slides {
-                display: flex;
-                width: 100%;
-                animation: slide 16s infinite;
-            }
-
-            /* Each Slide */
-            .slide {
-                min-width: 100%;
-                transition: transform 0.3s ease;
-                object-fit: cover;
-            }
-
-            /* Animation Keyframes */
-            @keyframes slide {
-                0%   { transform: translateX(0%); }
-                20%  { transform: translateX(0%); }
-                25%  { transform: translateX(-100%); }
-                45%  { transform: translateX(-100%); }
-                50%  { transform: translateX(-200%); }
-                70%  { transform: translateX(-200%); }
-                75%  { transform: translateX(-300%); }
-                95%  { transform: translateX(-300%); }
-                100% { transform: translateX(0%); }
-            }
-
-            /* Student Slider Styles */
-            .student-slider {
-                width: 100%;
-                max-width: 800px;
-                margin: 30px auto;
-                overflow: hidden;
-                border-radius: 30px 10px 30px 10px;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-                position: relative;
-            }
-
-            .student-slides {
-                display: flex;
-                width: 100%;
-                animation: student-slide 24s infinite;
-            }
-
-            @keyframes student-slide {
-                0%   { transform: translateX(0%); }
-                15%  { transform: translateX(0%); }
-                16.67% { transform: translateX(-100%); }
-                31.67% { transform: translateX(-100%); }
-                33.33% { transform: translateX(-200%); }
-                48.33% { transform: translateX(-200%); }
-                50%  { transform: translateX(-300%); }
-                65%  { transform: translateX(-300%); }
-                66.67% { transform: translateX(-400%); }
-                81.67% { transform: translateX(-400%); }
-                83.33% { transform: translateX(-500%); }
-                98.33% { transform: translateX(-500%); }
-                100% { transform: translateX(0%); }
-            }
-        </style>
-
-        <!-- Study Abroad Section -->
-        <section id="study-abroad">
-            <h2>Study in Abroad</h2>
-            <div class="countries">
-                <div class="country animate"><img src="flagsJapan.png" alt="Japan Flag"><p>Japan</p></div>
-                <div class="country animate"><img src="flagsKorea.png" alt="Korea Flag"><p>Korea</p></div>
-                <div class="country animate"><img src="flagsUSA.png" alt="USA Flag"><p>USA</p></div>
-                <div class="country animate"><img src="flagsUK.png" alt="UK Flag"><p>UK</p></div>
-                <div class="country animate"><img src="flagsAustralia.png" alt="Australia Flag"><p>Australia</p></div>
-                <div class="country animate"><img src="flagsdenmark.png" alt="Denmark Flag"><p>Denmark</p></div>
-                <div class="country animate"><img src="flagscanada.png" alt="Canada Flag"><p>Canada</p></div>
-            </div>
-        </section>
-
-        <style>
-            /* Study Abroad Section */
-            #study-abroad {background:#fff8e1; padding:80px 50px; text-align:center;}
-            #study-abroad h2 {color:#ff5722; margin-bottom:40px;}
-            .countries {display:flex; justify-content:center; flex-wrap:wrap; gap:30px;}
-            .country {background:#fffbe6; border-radius:15px; padding:20px; width:150px; box-shadow:0 5px 15px rgba(0,0,0,0.2); transition:0.3s; opacity:0; transform: translateY(50px);}
-            .country img {width:80px; height:50px; object-fit:cover; margin-bottom:10px; border-radius:5px; border:1px solid #ccc;}
-            .country p {font-weight:700; color:#ff5722; font-size:18px;}
-            .country:hover {transform:scale(1.05);}
-            
-            /* Animation */
-            .animate.visible {opacity:1; transform:translateY(0); transition: all 0.8s ease-in-out;}
-        </style>
-
-        <script>
-            // Animate on scroll
-            const countries = document.querySelectorAll('.country.animate');
-
-            function revealCountries() {
-                const triggerBottom = window.innerHeight * 0.85;
-                countries.forEach(country => {
-                    const countryTop = country.getBoundingClientRect().top;
-                    if(countryTop < triggerBottom){
-                        country.classList.add('visible');
-                    }
-                });
-            }
-
-            window.addEventListener('scroll', revealCountries);
-            window.addEventListener('load', revealCountries);
-        </script>
-
-        <!-- Our Successful Students Slider -->
-        <h2>Our Successful Students</h2>
-        <div class="student-slider">
-            <div class="student-slides">
-                <img src="std1.jpg" alt="Student 1" class="slide">
-                <img src="std2.jpg" alt="Student 2" class="slide">
-                <img src="std3.jpg" alt="Student 3" class="slide">
-                <img src="std4.jpg" alt="Student 4" class="slide">
-                <img src="std5.jpg" alt="Student 5" class="slide">
-                <img src="std6.jpg" alt="Student 6" class="slide">
+                <div class="slide">
+                    <img src="USA.jpg" alt="Study in USA - Sunrise Education Foundation">
+                </div>
+                <div class="slide">
+                    <img src="Japan.jpg" alt="Study in Japan - Sunrise Education Foundation">
+                </div>
+                <div class="slide">
+                    <img src="Korea.jpg" alt="Study in Korea - Sunrise Education Foundation">
+                </div>
+                <div class="slide">
+                    <img src="UK.jpg" alt="Study in UK - Sunrise Education Foundation">
+                </div>
             </div>
         </div>
     </section>
-  
 
+    <!-- Study Abroad Section -->
+    <section id="study-abroad">
+        <h2>Study Abroad</h2>
+        <p>We provide guidance and support for studying in these popular destinations</p>
+        <div class="countries">
+            <div class="country animate"><img src="flagsJapan.png" alt="Japan Flag - Study in Japan"><p>Japan</p></div>
+            <div class="country animate"><img src="flagsKorea.png" alt="Korea Flag - Study in Korea"><p>Korea</p></div>
+            <div class="country animate"><img src="flagsUSA.png" alt="USA Flag - Study in USA"><p>USA</p></div>
+            <div class="country animate"><img src="flagsUK.png" alt="UK Flag - Study in UK"><p>UK</p></div>
+            <div class="country animate"><img src="flagsAustralia.png" alt="Australia Flag - Study in Australia"><p>Australia</p></div>
+            <div class="country animate"><img src="flagsdenmark.png" alt="Denmark Flag - Study in Denmark"><p>Denmark</p></div>
+            <div class="country animate"><img src="flagscanada.png" alt="Canada Flag - Study in Canada"><p>Canada</p></div>
+            <div class="country animate"><img src="flagsNewzealand.png" alt="New Zealand Flag - Study in New Zealand"><p>New Zealand</p></div>
+        </div>
+    </section>
+
+    <!-- Our Successful Students Slider -->
+    <section id="successful-students">
+        <h2>Our Successful Students</h2>
+        <div class="student-slider">
+            <div class="student-slides">
+                <img src="std1.jpg" alt="Successful Student 1 - Sunrise Education Foundation" class="slide">
+                <img src="std2.jpg" alt="Successful Student 2 - Sunrise Education Foundation" class="slide">
+                <img src="std3.jpg" alt="Successful Student 3 - Sunrise Education Foundation" class="slide">
+                <img src="std4.jpg" alt="Successful Student 4 - Sunrise Education Foundation" class="slide">
+                <img src="std5.jpg" alt="Successful Student 5 - Sunrise Education Foundation" class="slide">
+                <img src="std6.jpg" alt="Successful Student 6 - Sunrise Education Foundation" class="slide">
+            </div>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about">
@@ -405,11 +1260,54 @@ body::before {
                 <p>We help you explore study abroad programs and international career pathways.</p>
             </div>
         </div>
+        
+        <!-- Stats Section -->
+        <div class="stats-grid">
+          <div class="stat-item" style="background: #eff6ff;">
+            <div class="stat-counter counter" data-target="1000">0</div>
+            <p class="stat-label">Students Guided</p>
+          </div>
+          <div class="stat-item" style="background: #fff7ed;">
+            <div class="stat-counter counter" data-target="50">0</div>
+            <p class="stat-label">Partner Universities</p>
+          </div>
+          <div class="stat-item" style="background: #faf5ff;">
+            <div class="stat-counter counter" data-target="95">0</div>
+            <p class="stat-label">Success Rate %</p>
+          </div>
+          <div class="stat-item" style="background: #f0fdf4;">
+            <div class="stat-counter counter" data-target="15">0</div>
+            <p class="stat-label">Years Experience</p>
+          </div>
+        </div>
+
+        <!-- Progress bars -->
+        <div style="margin-top: 2rem; space-y: 1rem;">
+          <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="color: #374151; font-weight: 500;">Student Satisfaction</span>
+              <span style="color: #374151; font-weight: 500;">98%</span>
+            </div>
+            <div style="width: 100%; background: #e5e7eb; border-radius: 9999px; height: 0.75rem;">
+              <div class="progress-bar gradient-blue" data-progress="98" style="height: 0.75rem; border-radius: 9999px;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="color: #374151; font-weight: 500;">Visa Success Rate</span>
+              <span style="color: #374151; font-weight: 500;">95%</span>
+            </div>
+            <div style="width: 100%; background: #e5e7eb; border-radius: 9999px; height: 0.75rem;">
+              <div class="progress-bar gradient-orange" data-progress="95" style="height: 0.75rem; border-radius: 9999px;"></div>
+            </div>
+          </div>
+        </div>
     </section>
 
     <!-- Services Section -->
     <section id="services">
         <h2>Our Services</h2>
+        <p>We offer a wide range of educational services to help you achieve your academic and career goals</p>
         <div class="service-cards">
             <div class="service-card">
                 <i class="fas fa-book"></i>
@@ -424,30 +1322,8 @@ body::before {
             <div class="service-card">
                 <i class="fas fa-briefcase"></i>
                 <h3>Professional Courses</h3>
-                <p>Accounting, Tally,Photoshop,Microsoft office packages,Graphic Design,HTML,CSS and more to boost your career.</p>
+                <p>Accounting, Tally, Photoshop, Microsoft Office, Graphic Design, HTML, CSS and more to boost your career.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section (Login Form Removed) -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <div class="form-container">
-            <!-- Message Form Only (Login Form Removed) -->
-            <form>
-                <h3>Message Us</h3>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Write your message..." rows="5" required></textarea>
-                <button type="submit">Send</button>
-                <br><br>
-                <!-- WhatsApp Message Button -->
-                <a href="https://wa.me/9816988625?text=Hi%20Sunrise%20Education%20Foundation!%20I%20would%20like%20to%20inquire%20about%20your%20services." 
-                   target="_blank" 
-                   style="display:inline-block; background:#25D366; color:white; padding:10px 20px; border-radius:5px; font-weight:700; text-decoration:none; margin-top:10px;">
-                    <i class="fab fa-whatsapp"></i> Message via WhatsApp
-                </a>
-            </form>
         </div>
     </section>
 
@@ -459,7 +1335,7 @@ body::before {
         <div class="student-reviews">
             <!-- Review 1 -->
             <div class="student-review">
-                <img src="pawan.jpg" alt="Mr. Pawan Limbu">
+                <img src="pawan.jpg" alt="Mr. Pawan Limbu - Successful Student">
                 <div class="stars">
                     <span class="star">&#9733;</span>
                     <span class="star">&#9733;</span>
@@ -473,7 +1349,7 @@ body::before {
             
             <!-- Review 2 -->
             <div class="student-review">
-                <img src="sabu.jpg" alt="Miss Sabu Gautam">
+                <img src="sabu.jpg" alt="Miss Sabu Gautam - Successful Student">
                 <div class="stars">
                     <span class="star">&#9733;</span>
                     <span class="star">&#9733;</span>
@@ -487,7 +1363,7 @@ body::before {
             
             <!-- Review 3 -->
             <div class="student-review">
-                <img src="rekha.jpg" alt="Miss Rekha Budathoki">
+                <img src="rekha.jpg" alt="Miss Rekha Budathoki - Successful Student">
                 <div class="stars">
                     <span class="star">&#9733;</span>
                     <span class="star">&#9733;</span>
@@ -501,7 +1377,7 @@ body::before {
             
             <!-- Review 4 -->
             <div class="student-review">
-                <img src="hari.jpg" alt="Mr Hari Khadka">
+                <img src="hari.jpg" alt="Mr Hari Khadka - Successful Student">
                 <div class="stars">
                     <span class="star">&#9733;</span>
                     <span class="star">&#9733;</span>
@@ -551,7 +1427,6 @@ body::before {
                 </div>
             </div>
 
-            <!-- Additional FAQs -->
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     <span>How long are the courses?</span>
@@ -559,16 +1434,6 @@ body::before {
                 </button>
                 <div class="faq-answer">
                     Course duration varies depending on the program. Language courses may range from 1 to 6 months, IT training from 2 to 12 weeks, and professional courses as per syllabus.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>Are there any age restrictions for enrollment?</span>
-                    <span class="icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    Most courses are open to students of all ages. Some professional or language courses may have recommended minimum age criteria.
                 </div>
             </div>
 
@@ -582,138 +1447,177 @@ body::before {
                 </div>
             </div>
 
-            <div class="faq-item">
+        <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
-                    <span>Can I get personalized tutoring?</span>
+                    <span>What are the fees for your courses?</span>
                     <span class="icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    Yes! We offer personalized tutoring and one-on-one guidance for students needing extra help in their courses.
+                    Course fees vary depending on the program and duration. Please contact us for detailed fee structures and any available discounts or payment plans.
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
-                    <span>Do you provide free trial classes?</span>
+                    <span>Do you assist with visa applications for study abroad?</span>
                     <span class="icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    For certain courses, we offer free trial classes so you can experience the teaching style before enrolling.
+                    Absolutely! Our experienced consultants provide comprehensive support for visa applications, including documentation and interview preparation.
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
-                    <span>Are group discounts available?</span>
+                    <span>Are there scholarships available?</span>
                     <span class="icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    Yes! We provide discounts for group enrollments, school/college batches, or referrals. Contact us for details.
+                    We offer merit-based scholarships for select courses and help students apply for external scholarships for study abroad programs.
                 </div>
+            </div> 
+        </div>
+    </section>
+
+    <!-- Board Members Section -->
+    <section id="board-members">
+        <h2>Board Members</h2>
+        <p><strong>Sunrise Education Foundation</strong> is committed to providing quality language and computer education to students of all ages.</p>
+
+        <div class="members-container">
+            
+            <!-- Founder -->
+            <div class="member-card">
+                <img src="suzan.jpg" alt="Suzan Adhikari - Founder of Sunrise Education Foundation">
+                <h3>Suzan Adhikari</h3>
+                <p><strong>Founder</strong></p>
+                <p>Visionary educator, responsible for establishing the foundation and leading educational programs.</p>
+                <p><strong>Phone:</strong> +977 9816988625</p>
             </div>
 
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>Can I change my course after enrollment?</span>
-                    <span class="icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    Depending on availability and course policies, you may be allowed to switch courses. Contact our administration for guidance.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>Is there a support system for students?</span>
-                    <span class="icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    Yes! We provide ongoing support via mentors, counselors, and online resources to ensure every student succeeds.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>What languages are courses offered in?</span>
-                    <span class="icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    Most courses are offered in English and Nepali. Some language courses are taught in the target language (Japanese, Korean, etc.) for immersion.
-                </div>
+            <!-- Head Coordinator -->
+            <div class="member-card">
+                <img src="ramesh.jpg" alt="Ramesh Magar - Head Coordinator at Sunrise Education Foundation">
+                <h3>Ramesh Magar</h3>
+                <p><strong>Head Coordinator</strong></p>
+                <p>Japanese & Korean Instructor, Computer Instructor, motivational speaker, responsible for curriculum and student engagement.</p>
+                <p><strong>Phone:</strong> +977 9810094146</p>
             </div>
         </div>
     </section>
 
-    <style>
-        #faq {
-            background:#fff8e1;
-            padding:80px 50px;
-            text-align:center;
-        }
-        #faq h2 {
-            font-size:28px;
-            margin-bottom:40px;
-            color:#e65100;
-        }
-        .faq-container {
-            max-width:800px;
-            margin:0 auto;
-            text-align:left;
-        }
-        .faq-item {
-            margin-bottom:15px;
-            border-radius:12px;
-            background:#fffbe6;
-            box-shadow:0 5px 15px rgba(0,0,0,0.1);
-            overflow:hidden;
-            transition:transform 0.2s ease;
-        }
-        .faq-item:hover {
-            transform:scale(1.02);
-        }
-        .faq-question {
-            width:100%;
-            text-align:left;
-            padding:18px 20px;
-            font-size:18px;
-            font-weight:700;
-            border:none;
-            background:none;
-            cursor:pointer;
-            color:#d84315;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            transition:color 0.3s;
-        }
-        .faq-question .icon {
-            font-size:22px;
-            transition:transform 0.3s, color 0.3s;
-        }
-        .faq-answer {
-            max-height:0;
-            overflow:hidden;
-            padding:0 20px;
-            font-size:16px;
-            color:#333;
-            transition:max-height 0.4s ease, padding 0.3s ease;
-        }
-        .faq-item.active .faq-answer {
-            max-height:400px; 
-            padding:15px 20px;
-        }
-        .faq-item.active .faq-question {
-            color:#ff5722;
-        }
-        .faq-item.active .faq-question .icon {
-            transform:rotate(45deg);
-            color:#ff5722;
-        }
-    </style>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us for any inquiries or to start your educational journey with us</p>
+        <div class="form-container">
+            <!-- Message Form -->
+            <form id="inquiryForm">
+                <h3>Send Inquiry</h3>
+                <div class="form-group">
+                    <input type="text" id="inquiryName" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="inquiryEmail" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="inquiryPhone" placeholder="Your Phone">
+                </div>
+                <div class="form-group">
+                    <textarea id="inquiryMessage" placeholder="Write your message..." required></textarea>
+                </div>
+                <button type="submit" class="btn" style="background: #ff5722; color: white; width: 100%;">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location">
+        <h2>Our Location</h2>
+        <p>
+            <strong>Sunrise Education Foundation</strong><br>
+            KD Complex, Beldangi Road <br>
+            East side of DMAX Building <br>
+            Damak-6, Jhapa, Nepal <br>
+            Phone: 023-577156 
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Sunrise Education Foundation provides top-quality language and IT training, consultancy, and study abroad guidance in Damak, Nepal.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#study-abroad">Study Abroad</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>KD Complex, Beldangi Road, Damak-6, Jhapa, Nepal</p>
+                <p>Phone: 023-577156</p>
+                <p>Email: sunriseeducationconsultancy06@gmail.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=61550260193271" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/explore/locations/122096501732008936/sunrise-education-foundation-damak-5jhapa/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@sunriseeducationdamak?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://youtube.com/@sujanadhikari3032?si=gdK9UP11VFPG8N4b" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="http://Wa.me/9816988625" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 SUNRISE EDUCATION FOUNDATION. All Rights Reserved.</p>
+            <p>Powered by SUNRISE EDUCATION FOUNDATION</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/9779816988625?text=Hi%20Sunrise%20Education%20Foundation!%20I%20would%20like%20to%20inquire%20about%20your%20services." 
+       target="_blank" 
+       class="floating-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Floating Call Button -->
+    <a href="tel:+9779816988625" class="floating-call">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     <script>
+        // Text to Speech Function
+        function speakMessage() {
+            const message = "Hi, welcome to Sunrise Education Foundation. How can I help you? Dream big, learn more, achieve greater with Sunrise Education Foundation.";
+            const speech = new SpeechSynthesisUtterance(message);
+            speech.lang = "en-US";
+            speech.pitch = 1;
+            speech.rate = 1;
+            window.speechSynthesis.speak(speech);
+        }
+        
+        // Scroll to Section Function
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // FAQ Toggle Functionality
         const faqItems = document.querySelectorAll('.faq-item');
-
+        
         faqItems.forEach(item => {
             const question = item.querySelector('.faq-question');
             question.addEventListener('click', () => {
@@ -729,76 +1633,173 @@ body::before {
                 question.setAttribute('aria-expanded', item.classList.contains('active'));
             });
         });
-    </script>
-
-    <!-- Board Members Section -->
-    <section id="about" style="padding:40px 20px;text-align:center;background:#f9f9f9;">
-        <h2 style="font-size:26px;margin-bottom:10px;color:#333;">Board Members</h2>
-        <p style="max-width:700px;margin:0 auto 25px;font-size:15px;color:#555;">
-            <strong>Sunrise Education Foundation</strong> is committed to providing quality language and computer education to students of all ages.
-        </p>
-
-        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:25px;">
+        
+        // Animate on Scroll
+        function revealElements() {
+            const triggerBottom = window.innerHeight * 0.85;
             
-            <!-- Founder -->
-            <div style="flex:1 1 280px;text-align:center;background:#fff;padding:20px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1);">
-                <img src="suzan.jpg" alt="Suzan Adhikari" style="width:140px;height:140px;border-radius:50%;object-fit:cover;margin-bottom:12px;border:3px solid #ff5722;">
-                <p><strong>Founder:</strong> Suzan Adhikari</p>
-                <p>Visionary educator, responsible for establishing the foundation and leading educational programs.</p>
-                <p><strong>Phone:</strong>+977 9816988625</p>
-            </div>
+            // Countries
+            document.querySelectorAll('.country.animate').forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if(top < triggerBottom){
+                    el.classList.add('visible');
+                }
+            });
+            
+            // Cards in About
+            document.querySelectorAll('.card').forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if(top < triggerBottom){
+                    el.classList.add('visible');
+                }
+            });
+            
+            // Service Cards
+            document.querySelectorAll('.service-card').forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if(top < triggerBottom){
+                    el.classList.add('visible');
+                }
+            });
+            
+            // Student Reviews
+            document.querySelectorAll('.student-review').forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if(top < triggerBottom){
+                    el.classList.add('visible');
+                }
+            });
+            
+            // FAQ Items
+            document.querySelectorAll('.faq-item').forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if(top < triggerBottom){
+                    el.classList.add('visible');
+                }
+            });
+            
+            // Member Cards
+            document.querySelectorAll('.member-card').forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if(top < triggerBottom){
+                    el.classList.add('visible');
+                }
+            });
 
-            <!-- Head Coordinator -->
-            <div style="flex:1 1 280px;text-align:center;background:#fff;padding:20px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1);">
-                <img src="ramesh.jpg" alt="Ramesh Magar" style="width:140px;height:140px;border-radius:50%;object-fit:cover;margin-bottom:12px;border:3px solid #fdd835;">
-                <p><strong>Head Coordinator:</strong> Ramesh Magar</p>
-                <p>Japanese & Korean Instructor, Computer Instructor, motivational speaker, responsible for curriculum and student engagement.</p>
-                <p><strong>Phone:</strong> +977 9810094146</p>
-            </div>
-        </div>
-    </section>
+            // Stats and Progress in About (run once when visible)
+            const statsGrid = document.querySelector('.stats-grid');
+            if (statsGrid && statsGrid.getBoundingClientRect().top < triggerBottom && !window.statsAnimated) {
+                window.statsAnimated = true;
 
-    <!-- Location Section -->
-    <section id="location" style="text-align:center; margin:40px 0;">
-        <h2>Our Location</h2>
-        <p>
-            <strong>Sunrise Education Foundation</strong><br>
-            KD Complex, Beldangi Road <br>
-            East side of DMAX Building <br>
-            Damak-6, Jhapa, Nepal <br>
-            Phone: 023-577156 
-        </p>
-    </section>
+                // Animate counters
+                document.querySelectorAll('.counter').forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    let count = 0;
+                    const increment = target / 100; // Adjust speed here
 
-    <!-- Footer -->
-    <footer>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61550260193271" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/explore/locations/122096501732008936/sunrise-education-foundation-damak-5jhapa/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@sunriseeducationdamak?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://youtube.com/@sujanadhikari3032?si=gdK9UP11VFPG8N4b" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="http://Wa.me/9816988625" target="_blank"><i class="fab fa-whatsapp"></i></a><br><br>
-            <a href="mailto:sunriseeducationconsultancy06@gmail.com" style="text-decoration:none; font-size:18px; color:#fff; background:#d93025; padding:10px 20px; border-radius:5px;">
-                📧 Email Us
-            </a>
-        </div>
-        <p>&copy; 2025 SUNRISE EDUCATION FOUNDATION. All Rights Reserved. <br>
-           Powered by SUNRISE EDUCATION FOUNDATION</p>
-    </footer>
+                    function updateCounter() {
+                        if (count < target) {
+                            count += increment;
+                            counter.innerText = Math.ceil(count);
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    }
+                    updateCounter();
+                });
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/9779816988625?text=Hi%20Sunrise%20Education%20Foundation!%20I%20would%20like%20to%20inquire%20about%20your%20services." 
-       target="_blank" 
-       class="floating-btn">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Floating Call Button -->
-    <a href="tel:+9779816988625" class="floating-call">
-        <i class="fas fa-phone"></i>
-    </a>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+                // Animate progress bars
+                document.querySelectorAll('.progress-bar').forEach(bar => {
+                    bar.style.width = bar.dataset.progress + '%';
+                });
+            }
+        }
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            revealElements();
+            
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('responsive');
+        });
+        
+        // Close mobile menu and smooth scroll when clicking on a link
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+                mainNav.classList.remove('responsive');
+            });
+        });
+        
+        // Form Submission to WhatsApp
+        const inquiryForm = document.getElementById('inquiryForm');
+        if (inquiryForm) {
+            inquiryForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Get form data
+                const name = document.getElementById('inquiryName').value;
+                const email = document.getElementById('inquiryEmail').value;
+                const phone = document.getElementById('inquiryPhone').value;
+                const message = document.getElementById('inquiryMessage').value;
+                
+                // Format WhatsApp message
+                const whatsappMessage = `*New Inquiry from Sunrise Education Website*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Message:* ${message}`;
+                
+                // Open WhatsApp with the message
+                window.open(`https://wa.me/9779816988625?text=${whatsappMessage}`, '_blank');
+                
+                // Reset form
+                inquiryForm.reset();
+            });
+        }
+        
+        // Set active navigation link on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Initialize on load
+        window.addEventListener('load', () => {
+            revealElements();
+            
+            // Set current year in copyright
+            document.querySelector('.copyright p:first-child').innerHTML = 
+                `&copy; ${new Date().getFullYear()} SUNRISE EDUCATION FOUNDATION. All Rights Reserved.`;
+        });
+    </script>
 </body>
 </html>
