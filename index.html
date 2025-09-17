@@ -186,6 +186,62 @@
             }
         }
 
+        /* Join Us Today Button Styles */
+        .btn-join {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff3333, #ffcc00);
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-join:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #ff0000, #ffcc00);
+        }
+        
+        .btn-join:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-join::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-join:hover::after {
+            transform: translateX(100%);
+        }
+        
+        .btn-join i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-join:hover i {
+            transform: translateX(4px);
+        }
+
         /* Sections Common Styles */
         section {
             padding: 70px 20px;
@@ -820,11 +876,13 @@
         .member-card h3 {
             color: var(--primary);
             margin-bottom: 10px;
+            font-size: 20px;
         }
         
         .member-card p {
             margin: 5px 0;
             text-align: center;
+            font-size: 16px;
         }
         
         /* Location Section */
@@ -1133,6 +1191,11 @@
                 font-size: 14px;
             }
             
+            .btn-join {
+                padding: 14px 28px;
+                font-size: 1.1rem;
+            }
+            
             #home h2 {
                 font-size: 28px;
             }
@@ -1187,10 +1250,6 @@
     <header>
         <a href="index.html" class="logo-container">
             <img src="logo.jpg" alt="Sunrise Education Foundation Logo - Language & IT Training Center">
-            <div class="site-name">
-                SUNRISE EDUCATION FOUNDATION<br>
-                <p>Beldangi Road, Damak-6, Nepal</p>
-            </div>
         </a>
         
         <div class="menu-toggle" id="menuToggle">
@@ -1212,7 +1271,12 @@
     <section id="home">
         <h2>Welcome to SUNRISE EDUCATION FOUNDATION</h2>
         <p>Top-quality consultancy and training services to boost your educational and professional growth. Join us to enhance your skills and career opportunities!</p>
-        <button class="btn" onclick="scrollToSection('contact')">Join Us Today</button>
+        
+        <!-- Join Us Today Button -->
+        <button class="btn-join" onclick="scrollToSection('contact')">
+            Join Us Today <i class="fas fa-arrow-right"></i>
+        </button>
+        
         <button class="btn btn-secondary voice-btn" onclick="speakMessage()">
             <i class="fas fa-volume-up"></i> Listen to our Message
         </button>
@@ -1431,7 +1495,7 @@
                     <span class="icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    We offer IT Training, Language courses (IELTS, PTE, Japanese, Korean), Accounting, Tally, DSA, Python, and more.
+                    We offer IT Training, Language courses (IELTS, PTE, Japanese, Korean), Accounting, Tally, and more.
                 </div>
             </div>
 
@@ -1640,7 +1704,13 @@
         
         // Scroll to Section Function
         function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         }
         
         // FAQ Toggle Functionality
