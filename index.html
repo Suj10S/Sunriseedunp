@@ -148,6 +148,9 @@
             width: 30px;
             height: 21px;
             cursor: pointer;
+            position: absolute;
+            top: 25px;
+            right: 20px;
         }
         
         .menu-toggle span {
@@ -158,6 +161,31 @@
             transition: all 0.3s;
         }
         
+        /* Mobile Navigation Styles */
+        @media (max-width: 900px) {
+            nav {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                margin-top: 15px;
+            }
+            
+            nav.responsive {
+                display: flex;
+            }
+            
+            nav a {
+                margin: 8px 0;
+                padding: 12px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                text-align: center;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+        }
+
         /* Sections Common Styles */
         section {
             padding: 70px 20px;
@@ -1025,7 +1053,7 @@
             }
             
             nav.responsive {
-                display: block;
+                display: flex;
                 width: 100%;
                 margin-top: 15px;
             }
@@ -1729,15 +1757,17 @@
             }
         });
         
-        // Mobile Menu Toggle
+        // Mobile Menu Toggle - Improved
         const menuToggle = document.getElementById('menuToggle');
         const mainNav = document.getElementById('mainNav');
         
         menuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('responsive');
+            // Animate hamburger icon
+            menuToggle.classList.toggle('active');
         });
-        
-        // Close mobile menu and smooth scroll when clicking on a link
+
+        // Close mobile menu when clicking on a link
         const navLinks = document.querySelectorAll('nav a');
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
@@ -1745,7 +1775,17 @@
                 const targetId = link.getAttribute('href').substring(1);
                 document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
                 mainNav.classList.remove('responsive');
+                menuToggle.classList.remove('active');
             });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mainNav.contains(e.target) && !menuToggle.contains(e.target) && 
+                mainNav.classList.contains('responsive')) {
+                mainNav.classList.remove('responsive');
+                menuToggle.classList.remove('active');
+            }
         });
         
         // Form Submission to WhatsApp
