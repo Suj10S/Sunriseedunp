@@ -423,44 +423,94 @@
         /* Animation */
         .animate.visible {opacity:1; transform:translateY(0); transition: all 0.8s ease-in-out;}
         
-        /* Student Slider Styles */
-        .student-slider {
-            width: 100%;
-            max-width: 800px;
-            margin: 30px auto;
-            overflow: hidden;
-            border-radius: 30px 10px 30px 10px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            position: relative;
-        }
+/* Our Successful Students Slider */
+#successful-students {
+    background: #fff8e1;
+    padding: 70px 20px;
+    text-align: center;
+}
 
-        .student-slides {
-            display: flex;
-            width: 600%;
-            animation: student-slide 24s infinite;
-        }
+.student-slider {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    position: relative;
+    background: #fff;
+}
 
-        @keyframes student-slide {
-            0%   { transform: translateX(0%); }
-            15%  { transform: translateX(0%); }
-            16.67% { transform: translateX(-16.6667%); }
-            31.67% { transform: translateX(-16.6667%); }
-            33.33% { transform: translateX(-33.3333%); }
-            48.33% { transform: translateX(-33.3333%); }
-            50%  { transform: translateX(-50%); }
-            65%  { transform: translateX(-50%); }
-            66.67% { transform: translateX(-66.6667%); }
-            81.67% { transform: translateX(-66.6667%); }
-            83.33% { transform: translateX(-83.3333%); }
-            98.33% { transform: translateX(-83.3333%); }
-            100% { transform: translateX(0%); }
-        }
-        
-        .student-slides img {
-            width: calc(100% / 16);
-            height: auto;
-            display: block;
-        }
+.student-slides {
+    display: flex;
+    width: 1600%;                   /* 16 slides × 100% */
+    animation: student-slide 32s infinite ease-in-out;
+}
+
+.student-slides img {
+    width: 100%;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+/* Pause animation when hovering (very user-friendly) */
+.student-slider:hover .student-slides {
+    animation-play-state: paused;
+}
+
+/* 16 images – each shown for ~2 seconds */
+@keyframes student-slide {
+    0%     { transform: translateX(0%); }
+    6%     { transform: translateX(0%); }
+    6.25%  { transform: translateX(-6.25%); }
+    12.25% { transform: translateX(-6.25%); }
+
+    12.5%  { transform: translateX(-12.5%); }
+    18.5%  { transform: translateX(-12.5%); }
+
+    18.75% { transform: translateX(-18.75%); }
+    24.75% { transform: translateX(-18.75%); }
+
+    25%    { transform: translateX(-25%); }
+    31%    { transform: translateX(-25%); }
+
+    31.25% { transform: translateX(-31.25%); }
+    37.25% { transform: translateX(-31.25%); }
+
+    37.5%  { transform: translateX(-37.5%); }
+    43.5%  { transform: translateX(-37.5%); }
+
+    43.75% { transform: translateX(-43.75%); }
+    49.75% { transform: translateX(-43.75%); }
+
+    50%    { transform: translateX(-50%); }
+    56%    { transform: translateX(-50%); }
+
+    56.25% { transform: translateX(-56.25%); }
+    62.25% { transform: translateX(-56.25%); }
+
+    62.5%  { transform: translateX(-62.5%); }
+    68.5%  { transform: translateX(-62.5%); }
+
+    68.75% { transform: translateX(-68.75%); }
+    74.75% { transform: translateX(-68.75%); }
+
+    75%    { transform: translateX(-75%); }
+    81%    { transform: translateX(-75%); }
+
+    81.25% { transform: translateX(-81.25%); }
+    87.25% { transform: translateX(-81.25%); }
+
+    87.5%  { transform: translateX(-87.5%); }
+    93.5%  { transform: translateX(-87.5%); }
+
+    93.75% { transform: translateX(-93.75%); }
+    99.75% { transform: translateX(-93.75%); }
+
+    100%   { transform: translateX(-100%); }
+}
         
         /* About Section */
         #about {
