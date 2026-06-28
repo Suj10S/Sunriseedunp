@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUNRISE EDUCATION FOUNDATION – Language & IT Training, Study Abroad</title>
-    <!-- Meta, SEO, fonts, icons etc. (kept same) -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         * { margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat',sans-serif; }
         :root { --primary:#ff5722; --secondary:#fdd835; --accent:#2196f3; --light:#fffbe6; --dark:#333; }
         body { background:var(--light); color:var(--dark); line-height:1.6; overflow-x:hidden; }
-        /* watermark etc */
         body::before { content:""; position:fixed; top:50%; left:50%; width:400px; height:400px; background:url('logo.jpg') no-repeat center center; background-size:contain; opacity:0.08; transform:translate(-50%,-50%) rotate(-20deg); z-index:0; pointer-events:none; }
         header { background:linear-gradient(135deg,var(--secondary),var(--primary)); padding:12px 30px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; position:sticky; top:0; z-index:1000; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
         .logo-container { display:flex; align-items:center; text-decoration:none; color:white; }
         .logo-container img { height:48px; margin-right:12px; border-radius:6px; }
-        .site-name { font-size:18px; font-weight:bold; letter-spacing:1px; }
         .lang-toggle { display:flex; gap:6px; background:rgba(255,255,255,0.2); padding:5px 10px; border-radius:40px; }
         .lang-toggle button { background:transparent; border:1px solid white; color:white; padding:4px 12px; border-radius:30px; font-weight:600; cursor:pointer; transition:0.3s; font-size:14px; }
         .lang-toggle button.active { background:white; color:var(--primary); border-color:white; }
@@ -52,10 +49,17 @@
         @keyframes slide {
             0%{transform:translateX(0%)} 20%{transform:translateX(0%)} 25%{transform:translateX(-25%)} 45%{transform:translateX(-25%)} 50%{transform:translateX(-50%)} 70%{transform:translateX(-50%)} 75%{transform:translateX(-75%)} 95%{transform:translateX(-75%)} 100%{transform:translateX(0%)}
         }
-        /* student slider – show one at a time */
-        .student-slider { width:100%; max-width:800px; margin:30px auto; overflow:hidden; border-radius:30px 10px 30px 10px; box-shadow:0 10px 25px rgba(0,0,0,0.3); position:relative; }
+        /* student slider – show one at a time, preserve aspect ratio */
+        .student-slider { width:100%; max-width:800px; margin:30px auto; overflow:hidden; border-radius:30px 10px 30px 10px; box-shadow:0 10px 25px rgba(0,0,0,0.3); position:relative; background:#f0ebe6; }
         .student-slides { display:flex; width:1600%; animation:studentSlide 32s infinite; }
-        .student-slides img { width:calc(100% / 16); height:auto; aspect-ratio:1/0.8; object-fit:cover; display:block; }
+        .student-slides img { 
+            width: calc(100% / 16); 
+            height: auto; 
+            aspect-ratio: auto; /* preserve original aspect */
+            object-fit: contain; 
+            display: block; 
+            background:#f5f0eb;
+        }
         @keyframes studentSlide {
             0%{transform:translateX(0%)} 5%{transform:translateX(0%)} 6.25%{transform:translateX(-6.25%)} 11.25%{transform:translateX(-6.25%)} 12.5%{transform:translateX(-12.5%)} 17.5%{transform:translateX(-12.5%)} 18.75%{transform:translateX(-18.75%)} 23.75%{transform:translateX(-18.75%)} 25%{transform:translateX(-25%)} 30%{transform:translateX(-25%)} 31.25%{transform:translateX(-31.25%)} 36.25%{transform:translateX(-31.25%)} 37.5%{transform:translateX(-37.5%)} 42.5%{transform:translateX(-37.5%)} 43.75%{transform:translateX(-43.75%)} 48.75%{transform:translateX(-43.75%)} 50%{transform:translateX(-50%)} 55%{transform:translateX(-50%)} 56.25%{transform:translateX(-56.25%)} 61.25%{transform:translateX(-56.25%)} 62.5%{transform:translateX(-62.5%)} 67.5%{transform:translateX(-62.5%)} 68.75%{transform:translateX(-68.75%)} 73.75%{transform:translateX(-68.75%)} 75%{transform:translateX(-75%)} 80%{transform:translateX(-75%)} 81.25%{transform:translateX(-81.25%)} 86.25%{transform:translateX(-81.25%)} 87.5%{transform:translateX(-87.5%)} 92.5%{transform:translateX(-87.5%)} 93.75%{transform:translateX(-93.75%)} 98.75%{transform:translateX(-93.75%)} 100%{transform:translateX(0%)}
         }
@@ -105,13 +109,18 @@
         .lang-en, .lang-np { display:block; }
         .hidden { display:none; }
         @media (max-width:600px) { .slide img { height:200px; } .country { width:110px; padding:12px; } }
+        /* remove sunrise text from nav, keep logo only */
+        .site-name { display:none; }
+        /* adjust header for better spacing */
+        header { padding:8px 20px; }
+        .logo-container img { height:44px; }
     </style>
 </head>
 <body>
 <header>
     <a href="#" class="logo-container">
         <img src="logo.jpg" alt="Sunrise Education">
-        <span class="site-name">SUNRISE EDUCATION</span>
+        <span class="site-name">SUNRISE EDUCATION</span> <!-- hidden via CSS -->
     </a>
     <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
         <div class="lang-toggle">
@@ -168,10 +177,10 @@
     <h2 class="lang-np hidden">हाम्रा सफल विद्यार्थीहरू</h2>
     <div class="student-slider">
         <div class="student-slides">
-            <img src="std1.jpg" alt="std1"><img src="std2.jpg" alt="std2"><img src="std3.jpg" alt="std3"><img src="std4.jpg" alt="std4">
-            <img src="std5.jpg" alt="std5"><img src="std6.jpg" alt="std6"><img src="std7.jpg" alt="std7"><img src="std8.jpg" alt="std8">
-            <img src="std9.jpg" alt="std9"><img src="std10.jpg" alt="std10"><img src="std11.jpg" alt="std11"><img src="std12.jpg" alt="std12">
-            <img src="std13.jpg" alt="std13"><img src="std14.jpg" alt="std14"><img src="std15.jpg" alt="std15"><img src="std16.jpg" alt="std16">
+            <img src="std1.jpg" alt="std1" loading="lazy"><img src="std2.jpg" alt="std2" loading="lazy"><img src="std3.jpg" alt="std3" loading="lazy"><img src="std4.jpg" alt="std4" loading="lazy">
+            <img src="std5.jpg" alt="std5" loading="lazy"><img src="std6.jpg" alt="std6" loading="lazy"><img src="std7.jpg" alt="std7" loading="lazy"><img src="std8.jpg" alt="std8" loading="lazy">
+            <img src="std9.jpg" alt="std9" loading="lazy"><img src="std10.jpg" alt="std10" loading="lazy"><img src="std11.jpg" alt="std11" loading="lazy"><img src="std12.jpg" alt="std12" loading="lazy">
+            <img src="std13.jpg" alt="std13" loading="lazy"><img src="std14.jpg" alt="std14" loading="lazy"><img src="std15.jpg" alt="std15" loading="lazy"><img src="std16.jpg" alt="std16" loading="lazy">
         </div>
     </div>
 </section>
@@ -288,7 +297,6 @@
         document.getElementById('langEn').classList.toggle('active', lang==='en');
         document.getElementById('langNp').classList.toggle('active', lang==='np');
         document.documentElement.lang = lang;
-        // update nav links text
         document.querySelectorAll('nav a').forEach(a => {
             if (lang==='en') a.innerText = a.getAttribute('data-en') || a.innerText;
             else a.innerText = a.getAttribute('data-np') || a.innerText;
@@ -312,7 +320,6 @@
         document.querySelectorAll('.country, .card, .service-card, .member-card, .student-review, .faq-item').forEach(el => {
             if(el.getBoundingClientRect().top < trigger) el.classList.add('visible');
         });
-        // stats & progress
         const stats = document.querySelector('.stats-grid');
         if(stats && stats.getBoundingClientRect().top < trigger && !window.statsAnimated) {
             window.statsAnimated = true;
